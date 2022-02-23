@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,600&family=Ubuntu:wght@400;500;700&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+    font-size: 12px;
+}
+img {
+    width: 100%;
+    height: fit-content;
+    object-fit: cover;
+}
+
+.initial-bg {
+    background-image: url("https://images.unsplash.com/photo-1498579809087-ef1e558fd1da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0;
+}
+.container {
+    width: 90%;
+    height: auto;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.head {
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 30px;
+}
+.search-field {
+    margin: 20px auto;
+    width: 90%;
+    max-width: 400px;
+}
+.search-field input {
+    display: inline-block;
+    height: 40px;
+    padding: 10px;
+    font-size: 18px;
+    border: 2px solid crimson;
+    width: 80%;
+    outline: none;
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+    border-right: none;
+}
+
+.search-field button {
+    float: right;
+    width: 20%;
+    text-align: center;
+    padding: 0px;
+    border-left: none;
+    background: chocolate;
+    color: white;
+    font-size: 25px;
+    border: 2px solid chocolate;
+    border-left: none; 
+    cursor: pointer;
+    height: 40px;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.search-field button:hover {
+    background-color: steelblue;
+    color: black;
+    border-color: steelblue;
+    transition: all ease-in;
+    transform: scale(1.05);
+}
+.search-result {
+    margin-top: 50px;
+    width: 100%;
+    display: grid;
+    grid-gap: 25px;
+    grid-template: auto / repeat(auto-fit,minmax(300px,1fr));
+}
+.item {
+    width: 100%;
+    border-radius: 8px;
+    background-color: lightgray;
+    padding: 15px;
+    overflow: hidden;
+}
+.item img {
+    width: 100%;
+    border-radius: 5px;
+}
+.item img:hover{
+    transition: all ease-in-out;
+    transform: scale(1.05);
+}
+.item .flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.item .title {
+    margin: 20px 10px 0 0px;
+    font-size: 1.8rem;
+}
+.view-btn {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: 10px;
+    align-self: flex-start;
+}
+.view-btn:hover {
+    background-color: cornflowerblue;
+    transition: all ease-in-out;
+    transform: scale(1.05);
+}
+.item-data {
+    display: block;
+    letter-spacing: 0.05rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 2rem;
+    margin-top: 10px;
+}
+
+.container.initial {
+    margin-bottom: 100px;
+}
+
+.container.initial .head{
+    font-size: 5rem;
+}
+.container.initial form {
+    max-width: 800px;
+}
+
+.new-bg {
+    background-color: beige;
+}
+.new-head {
+    font-size: 2rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-left: 100px;
+}
+.refresh-btn {
+    background-color: darkorange;
+    text-align: center;
+    display: block;
+    color: white;
+    padding: 1rem;
+    width: 250px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border: none;
+    margin-top: 10px;
+    margin-left: 100px;
+}
+.refresh-btn:hover {
+    background-color: aqua;
+    color: black;
+    transition: all ease-in-out;
+    transform: scale(1.05);
+}
+
+@media (max-width: 760px) {
+    .search-result {
+        grid-gap: 10px;
+    }
+    .container.initial .head {
+        font-size: 4rem;
+    }
+    .container.initial form {
+        max-width: 500px;
+    }
+    .container.initial form input {
+        padding: 10px;
+        font-size: 1.7rem;
+    }
+    .new-head,.new-bg {
+        max-width: 500px;
+    }
+    .refresh-btn {
+        max-width: 500px;
+    }
+}
+
