@@ -1,1 +1,3 @@
 # Recipe-App
+This is a Recipe App,where you can see almost every type dishes like cusines,starters,etc...
+This Application was built using HTML,CSS and JavaScript.
